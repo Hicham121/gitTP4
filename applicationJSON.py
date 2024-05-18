@@ -5,6 +5,10 @@ liste_notes = [
     {"nom": "Hanine", "prenom": "Hicham", "note": 13}
 ]
 
-# Écrire la liste de notes des eleves dans un fichier JSON avec la fonction dump
+# Write the list of student notes  from the JSON file 
 with open("donnees.json", "w") as mon_fichier:
     json.dump(liste_notes, mon_fichier)
+
+# Read the list of student notes  from the JSON file
+with open("donnees.json", "r") as mon_fichier:
+    liste_notes = json.load(mon_fichier)
